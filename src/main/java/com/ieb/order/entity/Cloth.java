@@ -29,8 +29,7 @@ public class Cloth {
     private Long id;
     private String name;
     private Integer salesUnits;
-
-    @Embedded //TODO esto tengo que estudiar como se va a comportar
+    @Embedded
     private Stock stock;
 
 }
