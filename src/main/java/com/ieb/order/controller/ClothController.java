@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * @author Isaias Espejo
+ */
 @RequestMapping("/cloth")
 @Slf4j
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -28,6 +31,11 @@ public class ClothController {
         this.service = service;
     }
 
+    /* Dado que el problema no lo especifica he decidido dejar los pesos completamente libres a que sean
+    positivos, negativos, cero y que no sumen 100% pero podrían añadirse en el propio service restricciones a los
+    valores de los pesos como se deseara y complicando la respuesta del controller con respuestas adicionales como
+    un bad request si los pesos no cumplen las reglas que pudieran establecerse
+     */
     @GetMapping("/sorted")
     public ResponseEntity<List<Cloth>> getSortedCloths(
             @RequestParam("salesUnitsWeight") double salesUnitsWeight,

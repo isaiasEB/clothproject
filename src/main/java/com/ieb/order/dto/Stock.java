@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * @author Isaias Espejo
+ */
 @AllArgsConstructor
 @Getter
 @Setter
